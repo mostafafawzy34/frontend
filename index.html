@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login System</title>
+    <link href="../frontend/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../frontend/css/style.css">
+</head>
+<body>
+
+    <div class="d-flex justify-content-end align-items-center px-4 py-2 bg-dark text-white shadow">
+        <button id="logoutBtn" class="logout-btn d-none" onclick="logout()">Logout</button>
+    </div>
+    
+
+    <div class="container w-75" id="authContainer">
+        <h2 class="text-center mb-4">Smart Login System</h2>
+
+        <div id="loginForm">
+            <div class="">
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"></label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+            </div>
+            <p id="loginErrorMessage" class="text-danger d-none"></p>
+            <button class="btn btn-success w-100 mt-5" onclick="login()">Login</button>
+            <p class="mt-3 text-center">Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </div>
+
+        <div id="signUpForm" class="d-none">
+            <div class="mb-3">
+                <label for="name" class="form-label"></label>
+                <input type="text" class="form-control" id="signUpName" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label"></label>
+                <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"></label>
+                <input type="password" class="form-control" id="signUpPassword" placeholder="Enter password">
+            </div>
+            <p id="signUpErrorMessage" class="text-danger d-none"></p>
+            <button class="btn btn-success w-100 mt-5" onclick="signUp()">Sign Up</button>
+            <p class="mt-3 text-center">You have an account? <a href="#" onclick="showLogin()">Sign In</a></p>
+        </div>
+    </div>
+
+    <div class="welcome-container d-none" id="welcomeScreen">
+        <h1 id="welcomeMessage">Welcome</h1>
+    </div>
+
+    <script src="../frontend/js/main.js"></script>
+</body>
+</html>
